@@ -1,0 +1,41 @@
+{
+  "name": "uptime-bg-app",
+  "version": "0.0.1",
+  "description": "A simple app to keep your computer awake by sending requests to a server every cron job interval",
+  "main": "app.js",
+  "author": "Saahil <neon@saahild.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder build --win portable --dir"
+  },
+  "dependencies": {
+    "auto-launch": "^5.0.6",
+    "electron-store": "^4.0.0",
+    "node-cron": "^3.0.3",
+    "node-fetch": "^2.6.7"
+  },
+  "build": {
+    "appId": "com.saahild.uptime-bg-app",
+    "copyright": "Saahil",
+    "win": {
+      "target": [
+        {
+          "target": "portable",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        }
+      ],
+      
+      "icon": "icon.jpg"
+    },
+    "icon": "icon.jpg",
+    "productName": "Uptime Background App"
+  },
+  "devDependencies": {
+    "electron": "^30.0.9",
+    "electron-builder": "^24.13.3"
+  }
+}

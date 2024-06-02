@@ -1,0 +1,6 @@
+node_modules
+data
+*.zip
+*.tar.gz
+*.tgz
+dist
